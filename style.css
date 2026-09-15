@@ -347,6 +347,10 @@ section {
 
 /* Mobile Devices (Max-width: 768px) */
 @media (max-width: 768px) {
+
+    #menu-icon {
+        display: block;
+    }
     .header {
         padding: 15px 5%;
     }
@@ -372,4 +376,34 @@ section {
     .services-list {
         grid-template-columns: 1fr;
     }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #081b29; /* ඔබේ Background පාට යොදන්න */
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none; /* මුලින් සඟවා තබයි */
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.8rem;
+        margin: 1.5rem 0;
+    }
+}
+
+  #menu-icon {
+    font-size: 3.6rem;
+    color: #fff;
+    cursor: pointer;
+    display: none; /* Desktop එකේදී නොපෙනේ */
 }

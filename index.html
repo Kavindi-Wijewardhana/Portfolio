@@ -9,11 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.navbar');
 
+    menuIcon.onclick = () => {
+        // Menu icon එක Click කරද්දී active class එක toggle වේ
+        navbar.classList.toggle('active');
+        
+        // Icon එක 'X' එකක් බවට මාරු කිරීම (optional)
+        menuIcon.classList.toggle('bx-x');
+    };
+
+    // Link එකක් Click කළ පසු Mobile Menu එක ඉබේම Close වීම
+    window.onscroll = () => {
+        navbar.classList.remove('active');
+        menuIcon.classList.remove('bx-x');
+    };
+</script>
     <!-- Header -->
     <header class="header">
         <a href="#home" class="logo">Portfolio.</a>
-
+          <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" >Home</a>
             <a href="#about" >About</a>
